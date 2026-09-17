@@ -1,0 +1,59 @@
+name: x402 Swag storefront API
+description: >-
+  An x402-native e-commerce storefront by ForgeMesh Labs selling physical merchandise (apparel, drinkware, stickers)
+  themed on the x402 protocol. AI agents or humans can complete real physical-goods purchases end-to-end
+  programmatically, paying per-order in USDC on Base via the x402 protocol, or by card via Stripe. Access is gated by
+  payment (HTTP 402) rather than API keys.
+url: https://raw.githubusercontent.com/api-evangelist/x402-swag-storefront-api/refs/heads/main/apis.yml
+created: '2026-09-17'
+modified: '2026-09-17'
+specificationVersion: '0.21'
+tags:
+  - e-commerce
+  - retail
+  - merchandise
+  - agentic commerce
+  - x402
+  - crypto payments
+  - stablecoin
+  - USDC
+  - Base
+  - onchain
+  - machine-payable API
+  - print-on-demand
+apis:
+  - name: x402 Swag storefront API
+    description: >-
+      x402-native REST/HTTP API for browsing the swag catalog and completing physical-goods purchases. Includes a
+      purpose-built agent catalog endpoint plus cart and checkout flows, gated by the x402 payment protocol (USDC on
+      Base) rather than API keys.
+    humanURL: https://x402swag.com/llms.txt
+    baseURL: https://x402swag.com
+    tags:
+      - e-commerce
+      - retail
+      - merchandise
+      - agentic commerce
+      - x402
+      - crypto payments
+      - stablecoin
+      - USDC
+      - Base
+      - onchain
+      - machine-payable API
+      - print-on-demand
+    properties:
+      - type: OpenAPI
+        url: https://x402swag.com/openapi.json
+      - type: LLMsTxt
+        url: https://x402swag.com/llms.txt
+      - type: Documentation
+        url: https://x402swag.com/llms.txt
+maintainers:
+  - FN: ForgeMesh Labs
+    url: https://x402swag.com
+generated:
+  by: apis.io/add
+  model: claude-opus-4-8
+  confidence: 90
+  at: '2026-09-17T14:09:10.558Z'
