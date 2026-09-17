@@ -1,0 +1,30 @@
+overlay: 1.0.0
+info:
+  title: x402 Swag storefront API — API Evangelist enhancements
+  version: 1.0.0
+extends: openapi/x402-swag-storefront-api-openapi.json
+x-generated: '2026-09-17'
+x-method: generated
+x-note: Enhancements only; never mutate the original OpenAPI. Adds contact/terms hints and a top-level
+  tag description observed in the live surface.
+actions:
+- target: $.info
+  description: Attribute the storefront to its provider
+  update:
+    contact:
+      name: ForgeMesh Labs
+      url: https://forgemesh.io
+- target: $.tags
+  description: Declare the Catalog tag used on per-product routes
+  update:
+  - name: Catalog
+    description: Individual product detail routes and the agent catalog.
+- target: $
+  description: Record x402 payment gating as a cross-cutting note (no securityScheme in the source spec)
+  update:
+    x-payment:
+      protocol: x402
+      network: eip155:8453
+      asset: USDC
+      discovery: /.well-known/x402.json
+      note: Paid routes answer HTTP 402; pay in USDC on Base and retry.

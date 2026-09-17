@@ -1,14 +1,33 @@
 name: x402 Swag storefront API
-description: >-
-  An x402-native e-commerce storefront by ForgeMesh Labs selling physical merchandise (apparel, drinkware, stickers)
-  themed on the x402 protocol. AI agents or humans can complete real physical-goods purchases end-to-end
-  programmatically, paying per-order in USDC on Base via the x402 protocol, or by card via Stripe. Access is gated by
-  payment (HTTP 402) rather than API keys.
+description: An x402-native e-commerce storefront by ForgeMesh Labs selling physical merchandise (apparel,
+  drinkware, stickers) themed on the x402 protocol. AI agents or humans can complete real physical-goods
+  purchases end-to-end programmatically, paying per-order in USDC on Base via the x402 protocol, or by
+  card via Stripe. Access is gated by payment (HTTP 402) rather than API keys.
 url: https://raw.githubusercontent.com/api-evangelist/x402-swag-storefront-api/refs/heads/main/apis.yml
 created: '2026-09-17'
 modified: '2026-09-17'
 specificationVersion: '0.21'
 tags:
+- e-commerce
+- retail
+- merchandise
+- agentic commerce
+- x402
+- crypto payments
+- stablecoin
+- USDC
+- Base
+- onchain
+- machine-payable API
+- print-on-demand
+apis:
+- name: x402 Swag storefront API
+  description: x402-native REST/HTTP API for browsing the swag catalog and completing physical-goods purchases.
+    Includes a purpose-built agent catalog endpoint plus cart and checkout flows, gated by the x402 payment
+    protocol (USDC on Base) rather than API keys.
+  humanURL: https://x402swag.com/llms.txt
+  baseURL: https://x402swag.com
+  tags:
   - e-commerce
   - retail
   - merchandise
@@ -21,38 +40,57 @@ tags:
   - onchain
   - machine-payable API
   - print-on-demand
-apis:
-  - name: x402 Swag storefront API
-    description: >-
-      x402-native REST/HTTP API for browsing the swag catalog and completing physical-goods purchases. Includes a
-      purpose-built agent catalog endpoint plus cart and checkout flows, gated by the x402 payment protocol (USDC on
-      Base) rather than API keys.
-    humanURL: https://x402swag.com/llms.txt
-    baseURL: https://x402swag.com
-    tags:
-      - e-commerce
-      - retail
-      - merchandise
-      - agentic commerce
-      - x402
-      - crypto payments
-      - stablecoin
-      - USDC
-      - Base
-      - onchain
-      - machine-payable API
-      - print-on-demand
-    properties:
-      - type: OpenAPI
-        url: https://x402swag.com/openapi.json
-      - type: LLMsTxt
-        url: https://x402swag.com/llms.txt
-      - type: Documentation
-        url: https://x402swag.com/llms.txt
+  properties:
+  - type: OpenAPI
+    url: openapi/x402-swag-storefront-api-openapi.json
+  - type: Overlay
+    url: overlays/x402-swag-storefront-api-openapi-overlay.yaml
+  - type: DataModel
+    url: data-model/x402-swag-storefront-api-data-model.yml
+  - type: ErrorCatalog
+    url: errors/x402-swag-storefront-api-problem-types.yml
+  - type: LLMsTxt
+    url: https://x402swag.com/llms.txt
+  - type: Documentation
+    url: https://x402swag.com/llms.txt
 maintainers:
-  - FN: ForgeMesh Labs
-    url: https://x402swag.com
-generated:
+- FN: ForgeMesh Labs
+  url: https://x402swag.com
+common:
+- type: Website
+  url: https://x402swag.com
+- type: GitHubOrganization
+  url: https://github.com/forgemeshlabs
+- type: AgentCard
+  url: a2a/x402-swag-storefront-api-a2a.yml
+- type: WellKnown
+  url: well-known/x402-swag-storefront-api-well-known.yml
+- type: MCPServer
+  url: mcp/x402-swag-storefront-api-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Authentication
+  url: authentication/x402-swag-storefront-api-authentication.yml
+- type: Conventions
+  url: conventions/x402-swag-storefront-api-conventions.yml
+- type: Conformance
+  url: conformance/x402-swag-storefront-api-conformance.yml
+- type: Lifecycle
+  url: lifecycle/x402-swag-storefront-api-lifecycle.yml
+- type: DomainSecurity
+  url: security/x402-swag-storefront-api-domain-security.yml
+- type: Packages
+  url: packages/x402-swag-storefront-api-packages.yml
+- type: RateLimits
+  url: rate-limits/x402-swag-storefront-api-rate-limits.yml
+- type: Plans
+  url: plans/x402-swag-storefront-api-plans-pricing.yml
+x-enrichment:
+  date: '2026-09-17'
+  status: enriched
+  artifacts_added: 24
+  pass: local-v3
+x-generated:
   by: apis.io/add
   model: claude-opus-4-8
   confidence: 90

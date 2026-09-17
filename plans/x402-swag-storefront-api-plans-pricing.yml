@@ -1,0 +1,26 @@
+generated: '2026-09-17'
+method: searched
+source: https://x402swag.com/.well-known/x402.json (machine-readable price discovery); no pricing page
+  (x402swag.com/pricing 404)
+plan_count: 0
+note: No subscription plans or tiers. Storefront is pay-per-call / pay-per-order via x402 (USDC on Base).
+  Fixed per-call prices below from x402.json; physical-goods orders pay a DYNAMIC per-order price quoted
+  at checkout (get-checkout-rates), or by card via Stripe.
+per_call_prices:
+- route: GET /api/agent/catalog
+  price_usd: 0.05
+  currency: USDC
+  network: eip155:8453
+- route: POST /api/custom/designs
+  price_usd: 0.5
+  currency: USDC
+  network: eip155:8453
+- route: POST /api/brief/subscribe
+  price_usd: 0.001
+  currency: USDC
+  network: eip155:8453
+- route: orders (checkout)
+  price_usd: dynamic
+  currency: USDC or card (Stripe)
+  network: eip155:8453
+  note: Quoted per order at get-checkout-rates.

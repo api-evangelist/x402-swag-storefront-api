@@ -1,0 +1,51 @@
+generated: '2026-09-17'
+method: derived
+source: Derived from OpenAPI 4xx/5xx responses + response descriptions.
+format: non-standard
+media_type: null
+note: Errors documented by status code + description only; no application/problem+json (RFC 9457) envelope.
+problem_types:
+- status: 400
+  title: Bad Request
+  operations:
+  - subscribe-brief
+  remediation: Fix the request payload (e.g. a valid email).
+- status: 402
+  title: Payment Required
+  operations:
+  - pay-order
+  - create-custom-design
+  - regenerate-custom-design
+  - subscribe-brief
+  - get-agent-catalog
+  remediation: Pay the x402 challenge (USDC on Base per PAYMENT-REQUIRED header/JSON body) and retry.
+  format: x402 challenge in PAYMENT-REQUIRED header + JSON body
+- status: 404
+  title: Not Found
+  operations:
+  - get-product
+  - get-collection
+  - get-cart
+  - add-cart-item
+  - get-order
+  - get-custom-design
+  - regenerate-custom-design
+  - approve-custom-design
+  remediation: Check the handle / token / id.
+- status: 422
+  title: Unprocessable Entity
+  operations:
+  - add-cart-item
+  - create-checkout
+  - pay-order
+  - create-stripe-session
+  - create-custom-design
+  - approve-custom-design
+  remediation: Validation failed; correct the fields (cart contents, shipping address, design inputs).
+- status: 503
+  title: Service Unavailable
+  operations:
+  - create-checkout
+  - create-stripe-session
+  - get-agent-catalog
+  remediation: Upstream (fulfilment/payment/Stripe) temporarily unavailable; retry with backoff.

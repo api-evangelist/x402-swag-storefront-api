@@ -1,0 +1,18 @@
+generated: '2026-09-17'
+method: searched
+source: npm registry search; the API itself ships no dedicated client SDK
+packages:
+- name: forgemesh
+  registry: npm
+  url: https://www.npmjs.com/package/forgemesh
+  official: true
+  first_party_to: ForgeMesh Labs (org), not this storefront
+  version: 0.1.3
+  published: '2026-05-14'
+  wraps_this_api: false
+  note: Org-level ForgeMesh agent-commerce toolkit (monetized MCP, affiliate routing, x402). NOT a client
+    SDK for the swag storefront; the storefront is called directly over HTTP with an x402 payment and
+    no API key. Recorded as related first-party tooling only.
+note: 'No dedicated first-party client library for the x402 Swag storefront exists on npm/PyPI (searched
+  x402swag, forgemesh). The API is intentionally SDK-less: pay-per-call over plain HTTP + x402. No SDKs
+  pointer emitted because none wraps this API.'

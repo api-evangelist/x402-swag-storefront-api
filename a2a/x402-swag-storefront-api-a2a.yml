@@ -1,0 +1,43 @@
+generated: '2026-09-17'
+method: probed
+source: https://x402swag.com/.well-known/agent-card.json
+name: x402 Swag
+provider:
+  organization: ForgeMesh Labs
+  url: https://forgemesh.io
+discovery:
+  path: /.well-known/agent-card.json
+  canonical: true
+  host: x402swag.com
+  also_served:
+  - path: /.well-known/agent.json
+    canonical: false
+    host: x402swag.com
+    note: legacy path, byte-identical to canonical card
+x-evidence:
+  fetched: '2026-09-17'
+  url: https://x402swag.com/.well-known/agent-card.json
+  http_status: 200
+  content_type: application/json
+card_file: a2a/x402-swag-storefront-api-agent-card.json
+grade: flavored
+grade_basis: capabilities is an OBJECT and skills is an ARRAY, but protocolVersion is absent (A2A 1.0.0
+  hard requirement) so the card fails a hard check.
+deviations:
+- field: protocolVersion
+  issue: missing
+  note: A2A 1.0.0 requires protocolVersion; card omits it.
+- field: securitySchemes.x402.type
+  issue: non-standard scheme type "x402"
+  note: Not an A2A-registered security scheme; describes HTTP 402 USDC-on-Base payment gating.
+- field: supportedProtocols/supportedInterfaces
+  issue: non-A2A vocabulary
+  note: Card uses x402-flavored fields rather than A2A url/preferredTransport/defaultInputModes at the
+    standard positions.
+skills_declared:
+- agent-catalog
+- custom-print-studio
+- brief-subscribe
+note: Real, provider-served AgentCard-shaped document owned by ForgeMesh Labs (provider.url forgemesh.io,
+  url x402swag.com). An identical card is served at forgemesh.io/.well-known/agent-card.json for the parent
+  org.

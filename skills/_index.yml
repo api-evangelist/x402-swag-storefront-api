@@ -1,0 +1,29 @@
+generated: '2026-09-17'
+method: generated
+source: Generated from openapi/x402-swag-storefront-api-openapi.json operationIds + agent-card skills.
+api: x402 Swag storefront API
+skills:
+- id: buy-merch-with-usdc
+  file: x402-swag-storefront-api-buy-merch-with-usdc.md
+  operations:
+  - list-products
+  - get-product
+  - add-cart-item
+  - get-checkout-rates
+  - create-checkout
+  - pay-order
+  - get-order
+- id: custom-print-studio
+  file: x402-swag-storefront-api-custom-print-studio.md
+  operations:
+  - custom-menu
+  - create-custom-design
+  - get-custom-design
+  - regenerate-custom-design
+  - approve-custom-design
+  - add-cart-item
+  - create-checkout
+- id: agent-catalog-one-call
+  file: x402-swag-storefront-api-agent-catalog-one-call.md
+  operations:
+  - get-agent-catalog
