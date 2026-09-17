@@ -1,7 +1,0 @@
-generated: '2026-09-17'
-method: searched
-source: OpenAPI (no rate-limit headers) + live docs (no published limits); x402swag.com/pricing 404
-limit_count: 0
-note: No published rate limits and no rate-limit response headers (no X-RateLimit-*, RateLimit-*, Retry-After)
-  in the contract. Free browse routes are unmetered by key; paid routes are throttled economically by
-  the x402 per-call price rather than a documented quota.
